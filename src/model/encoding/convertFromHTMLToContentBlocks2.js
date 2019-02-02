@@ -224,11 +224,11 @@ class ContentBlocksBuilder {
 
   // Map HTML tags to draftjs block types and disambiguation function
   blockTypeMap: BlockTypeMap;
-  disambiguate: (string, string) => ?string;
+  disambiguate: (a: string, b: string) => ?string;
 
   constructor(
     blockTypeMap: BlockTypeMap,
-    disambiguate: (string, string) => ?string,
+    disambiguate: (a: string, b: string) => ?string,
   ): void {
     this.clear();
     this.blockTypeMap = blockTypeMap;

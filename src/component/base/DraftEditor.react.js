@@ -519,7 +519,9 @@ class DraftEditor extends React.Component<DraftEditorProps, State> {
    * handler module to ensure that DOM events are managed appropriately for
    * the active mode.
    */
-  setMode: DraftEditorModes => void = (mode: DraftEditorModes): void => {
+  setMode: (mode: DraftEditorModes) => void = (
+    mode: DraftEditorModes,
+  ): void => {
     this._handler = handlerMap[mode];
   };
 
@@ -549,7 +551,9 @@ class DraftEditor extends React.Component<DraftEditorProps, State> {
    *
    * Set the clipboard state for a cut/copy event.
    */
-  setClipboard: (?BlockMap) => void = (clipboard: ?BlockMap): void => {
+  setClipboard: (clipboard: ?BlockMap) => void = (
+    clipboard: ?BlockMap,
+  ): void => {
     this._clipboard = clipboard;
   };
 
@@ -571,7 +575,9 @@ class DraftEditor extends React.Component<DraftEditorProps, State> {
    * an `onChange` prop to receive state updates passed along from this
    * function.
    */
-  update: EditorState => void = (editorState: EditorState): void => {
+  update: (editorState: EditorState) => void = (
+    editorState: EditorState,
+  ): void => {
     this._latestEditorState = editorState;
     this.props.onChange(editorState);
   };
